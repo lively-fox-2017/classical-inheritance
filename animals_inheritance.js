@@ -3,24 +3,26 @@
 
 class SuperPower {
   constructor(name) {
+    this.name = name
   }
 
   use_laser_vision() {
-    return " use laser vision !"
+    return this.name + " use laser vision !"
   }
 
   be_invisible() {
-    return " is invisible !"
+    return this.name + " is invisible !"
   }
 
 }
 
 
 class Animal {
-  constructor() {
+  constructor(name) {
+    this.name = name;
     this.num_legs = 2;
     this.is_warm_blooded = true;
-    this.superpower = new SuperPower();
+    this.superpower = new SuperPower(this.name);
   }
   walk(){
     return "walk";
@@ -28,8 +30,8 @@ class Animal {
 }
 
 class Frog extends Animal {
-  constructor(leg) {
-    super()
+  constructor(name,leg) {
+    super(name)
     this.num_legs = leg;
   }
   walk(){
@@ -38,8 +40,8 @@ class Frog extends Animal {
 }
 
 class Bat extends Animal {
-  constructor() {
-    super();
+  constructor(name) {
+    super(name);
   }
   walk(){
     return "fly";
@@ -47,28 +49,28 @@ class Bat extends Animal {
 }
 
 class Chimpanzee extends Animal {
-  constructor() {
-    super();
+  constructor(name) {
+    super(name);
   }
 }
 
 class Fox extends Animal {
-  constructor(leg) {
-    super();
+  constructor(name,leg) {
+    super(name);
     this.num_legs = leg;
   }
 }
 
 class Chicken extends Animal {
-  constructor() {
-    super();
+  constructor(name) {
+    super(name);
   }
 }
-var frog = new Frog(4);
-var chicken = new Chicken();
-var fox = new Fox(4);
-var bat = new Bat();
-var chimpanzee = new Chimpanzee();
+var frog = new Frog('FROG',4);
+var chicken = new Chicken('CHICKEN');
+var fox = new Fox('FOX',4);
+var bat = new Bat('BAT');
+var chimpanzee = new Chimpanzee('CHIMPANZEE');
 console.log(chicken);
 console.log(fox);
 console.log(fox.walk());
