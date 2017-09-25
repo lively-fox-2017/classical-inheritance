@@ -118,6 +118,15 @@ class AnimalBattleCage{
     }
   }
 
+  sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds) {
+        break;
+      }
+    }
+  }
+
   battle(){
     let damage = 0;
     while(this.animal1Health>0 && this.animal2Health>0){
@@ -126,6 +135,7 @@ class AnimalBattleCage{
       this.randAttack(this.animal1);
       this.animal1Health -= damage;
       console.log('Animal 1 Health',this.animal1Health);
+      this.sleep(500);
 
       damage = Math.round(Math.random() * 10);
       console.log(this.animal2.toString());
@@ -134,6 +144,7 @@ class AnimalBattleCage{
       console.log('Animal 2 Health',this.animal2Health);
 
       console.log('========================================\n\n');
+      this.sleep(500);
     }
   }
 
