@@ -37,6 +37,11 @@ class Chimpanzee extends Animal {
         return this.num_legs
     }
 
+    get superPower(){
+        let supow = this.super_power
+        return supow
+    }
+
 }
 
 class Duck extends Animal {
@@ -47,6 +52,11 @@ class Duck extends Animal {
 
     get numLegs(){
         return this.num_legs
+    }
+
+    get superPower(){
+        let supow = this.super_power
+        return supow
     }
 
     print(){
@@ -63,6 +73,11 @@ class Bat extends Animal {
 
     get numLegs(){
         return this.num_legs
+    }
+
+    get superPower(){
+        let supow = this.super_power
+        return supow
     }
 
     set numLegs(legs){
@@ -86,6 +101,11 @@ class Fox extends Animal {
         return this.num_legs
     }
 
+    get superPower(){
+        let supow = this.super_power
+        return supow
+    }
+
     set numLegs(legs){
         this.num_legs = legs
         return this
@@ -101,6 +121,11 @@ class Chicken extends Animal {
 
     get numLegs(){
         return this.num_legs
+    }
+
+    get superPower(){
+        let supow = this.super_power
+        return supow
     }
 
     set numLegs(legs){
@@ -132,8 +157,9 @@ class SuperPower {
 }
 
 let frog = new Frog()
-console.log(frog.superPower.useLaserVision())
+// console.log(frog.superPower.beInvisible())
 let chim = new Chimpanzee()
+console.log(chim.superPower.beInvisible())
 let duck = new Duck()
 let bat = new Bat()
 let chic = new Chicken()
