@@ -4,6 +4,7 @@ class Animal {
     constructor(legs) {
         this._num_legs = 2
         this.superpower = new Superpower()
+            //this.ayam = 'ayam'
     }
 }
 
@@ -39,7 +40,9 @@ class Chicken extends Animal {
     // constructor() {
     //     this._num_legs = legs
     // }
-
+    makan(makanan) {
+        this.makanan = makanan
+    }
 }
 
 class Superpower {
@@ -58,8 +61,11 @@ let Monyet = new Chimpanzee()
 let Rubah = new Fox()
 let Ayam = new Chicken()
 
+Ayam.makan('cacing')
+
 /* release 0 */ // parent assign legs =2 dan mengassign legs =4 untuk beberapa jenis hewan
 console.log(`Kodok berkaki ${Kodok._num_legs} Monyet berkaki ${Monyet._num_legs} Rubah juga berkaki${Rubah._num_legs}`)
     /* release 1 */ // + class superpower, + method laser & invisible
 console.log(Rubah.superpower.use_laser_vision())
 console.log(Kodok.superpower.be_invisible())
+console.log(`siAyam setelah makan ${Ayam.makanan} lalu ${Ayam.superpower.be_invisible()}`)
