@@ -29,8 +29,7 @@ class Lion extends Animal {
 
 class Fox extends Animal {
 	constructor(name, numLegs, blood){
-		super(numLegs, blood);
-		this._name = name;
+		super("Rubah", numLegs, blood);
 	}
 }
 
@@ -55,7 +54,13 @@ class SuperPower{
 }
 
 let frog = new Frog(2, "Warm");
+let bat = new Bat(2, "Warm");
 let lion = new Lion(4, "Cold");
+let fox = new Fox(4, "Cold");
+let chicken = new Chicken(4, "Warm");
 
 frog._superpower.use_laser_vision();
+bat._superpower.use_laser_vision();
 lion._superpower.be_invisible();
+fox._superpower.use_laser_vision();
+chicken._superpower.be_invisible();
