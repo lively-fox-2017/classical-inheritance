@@ -22,6 +22,9 @@ class Animal {
     this.is_warm_blooded = true;
     this.superpower = new SuperPower();
   }
+  walk(){
+    return "walk";
+  }
 }
 
 class Frog extends Animal {
@@ -29,11 +32,17 @@ class Frog extends Animal {
     super()
     this.num_legs = leg;
   }
+  walk(){
+    return "jump";
+  }
 }
 
 class Bat extends Animal {
   constructor() {
     super();
+  }
+  walk(){
+    return "fly";
   }
 }
 
@@ -62,6 +71,9 @@ var bat = new Bat();
 var chimpanzee = new Chimpanzee();
 console.log(chicken);
 console.log(fox);
+console.log(fox.walk());
 console.log(frog);
+console.log(frog.walk());
 console.log(bat);
+console.log(bat.walk());
 console.log(chimpanzee.superpower.use_laser_vision());
