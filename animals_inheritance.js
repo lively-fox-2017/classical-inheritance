@@ -4,6 +4,7 @@ class Animal {
   constructor() {
     this._num_legs = 2
     this._is_warm_blooded = true
+    this._superpower = new SuperPower()
   }
 
   get num_legs() {
@@ -12,6 +13,10 @@ class Animal {
 
   get is_warm_blooded() {
     return this.is_warm_blooded
+  }
+
+  get superpower() {
+    return this._superpower
   }
 }
 
@@ -44,13 +49,7 @@ class Fox extends Animal {
     super()
     this._num_legs = 4
     this._is_warm_blooded = true
-    this._superpower = new SuperPower()
   }
-
-  get superpower() {
-    return this._superpower
-  }
-
 }
 
 class Chicken extends Animal {
